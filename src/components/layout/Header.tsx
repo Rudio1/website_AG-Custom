@@ -36,12 +36,12 @@ const Header: React.FC = () => {
           const elementHeight = rect.height;
           
           // Calcular quanto da seção está visível na viewport
-          let visibleTop = Math.max(elementTop, offset);
-          let visibleBottom = Math.min(elementBottom, windowHeight);
-          let visibleHeight = Math.max(0, visibleBottom - visibleTop);
+          const visibleTop = Math.max(elementTop, offset);
+          const visibleBottom = Math.min(elementBottom, windowHeight);
+          const visibleHeight = Math.max(0, visibleBottom - visibleTop);
           
           // Porcentagem da seção que está visível
-          let visiblePercentage = visibleHeight / elementHeight;
+          const visiblePercentage = visibleHeight / elementHeight;
           
           // Se mais de 20% da seção está visível, considerá-la como candidata
           if (visiblePercentage > 0.2 && visibleHeight > maxVisible) {

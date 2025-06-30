@@ -20,7 +20,7 @@ const TestimonialsSection: React.FC = () => {
                 {testimonial.company}
               </p>
               <p className="service-card__description">
-                "{testimonial.message}"
+                &ldquo;{testimonial.message}&rdquo;
               </p>
               <div className="service-card__price">
                 {'⭐'.repeat(testimonial.rating)} ({testimonial.rating}/5)
