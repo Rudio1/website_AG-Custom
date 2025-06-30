@@ -1,0 +1,78 @@
+// === ESTILOS DO FOOTER ===
+
+.footer {
+  width: 100%;
+  background-color: $background-gray;
+  border-top: $border-width solid #e5e7eb;
+  margin-top: auto;
+  
+  &__container {
+    @include container;
+    padding-top: $spacing-2xl;
+    padding-bottom: $spacing-2xl;
+  }
+  
+  &__content {
+    @include grid(1, $spacing-2xl);
+    
+    @media (min-width: $tablet) {
+      @include grid(3, $spacing-2xl);
+    }
+  }
+  
+  &__section {
+    h3, h4 {
+      font-size: $font-lg;
+      font-weight: 600;
+      color: $primary-color;
+      margin-bottom: $spacing-md;
+    }
+    
+    h4 {
+      font-size: $font-base;
+      color: $text-color;
+    }
+    
+    p {
+      font-size: $font-sm;
+      color: $text-color;
+      margin-bottom: $spacing-sm;
+    }
+  }
+  
+  &__links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    @include flex(column, $spacing-sm);
+    
+    li {
+      margin: 0;
+    }
+    
+    a {
+      font-size: $font-sm;
+      color: $text-color;
+      text-decoration: none;
+      @include smooth-transition();
+      
+      &:hover {
+        color: $hover-color;
+        opacity: 0.8;
+      }
+    }
+  }
+  
+  &__bottom {
+    border-top: $border-width solid #e5e7eb;
+    margin-top: $spacing-2xl;
+    padding-top: $spacing-md;
+    text-align: center;
+    
+    p {
+      font-size: $font-sm;
+      color: $text-color;
+      margin: 0;
+    }
+  }
+} 

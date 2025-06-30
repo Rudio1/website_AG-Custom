@@ -1,0 +1,118 @@
+// === MIXINS REUTILIZÁVEIS ===
+
+// Mixin para centralizar conteúdo
+@mixin center-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Mixin para container responsivo com limitação máxima
+@mixin container {
+  max-width: $max-container-width;
+  margin: 0 auto;
+  padding: 0 $spacing-md;
+  
+  @media (min-width: $tablet) {
+    padding: 0 $spacing-lg;
+  }
+  
+  @media (min-width: $desktop) {
+    padding: 0 $spacing-xl;
+  }
+}
+
+// Mixin para container com limitação de viewport total
+@mixin viewport-container {
+  max-width: $max-viewport-width;
+  margin: 0 auto;
+  width: 100%;
+}
+
+// Mixin para seção com limitação de altura (Full HD)
+@mixin section-fullhd {
+  max-height: $max-viewport-height;
+  overflow: hidden;
+  @include viewport-container;
+}
+
+// Mixin para grid responsivo
+@mixin grid($columns: 1, $gap: $spacing-md) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  gap: $gap;
+}
+
+// Mixin para flex com espaçamento
+@mixin flex($direction: row, $gap: $spacing-md) {
+  display: flex;
+  flex-direction: $direction;
+  gap: $gap;
+}
+
+// Mixin para transições suaves
+@mixin smooth-transition($property: all, $duration: 0.2s) {
+  transition: $property $duration ease-in-out;
+}
+
+// Mixin para botões base
+@mixin button-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  border-radius: $border-radius-lg;
+  border: $border-width-2 solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  @include smooth-transition();
+  
+  &:focus {
+    outline: 2px solid $primary-color;
+    outline-offset: 2px;
+  }
+  
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+// Mixin para títulos
+@mixin title($level: 1) {
+  color: $text-color;
+  font-weight: bold;
+  line-height: 1.2;
+  
+  @if $level == 1 {
+    font-size: $font-4xl;
+    @media (min-width: $tablet) {
+      font-size: $font-5xl;
+    }
+  } @else if $level == 2 {
+    font-size: $font-3xl;
+    @media (min-width: $tablet) {
+      font-size: $font-4xl;
+    }
+  } @else if $level == 3 {
+    font-size: $font-2xl;
+    @media (min-width: $tablet) {
+      font-size: $font-3xl;
+    }
+  } @else if $level == 4 {
+    font-size: $font-xl;
+    @media (min-width: $tablet) {
+      font-size: $font-2xl;
+    }
+  } @else if $level == 5 {
+    font-size: $font-lg;
+    @media (min-width: $tablet) {
+      font-size: $font-xl;
+    }
+  } @else if $level == 6 {
+    font-size: $font-base;
+    @media (min-width: $tablet) {
+      font-size: $font-lg;
+    }
+  }
+} 

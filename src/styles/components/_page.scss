@@ -1,0 +1,215 @@
+// === ESTILOS DAS PÁGINAS ===
+
+.page {
+  min-height: 100vh;
+  width: 100%;
+  background: $background-light;
+  
+  &__main {
+    flex: 1;
+  }
+}
+
+// Seções da página
+.section {
+  padding: $spacing-3xl $spacing-md;
+  width: 100%;
+  background: $background-light;
+  
+  @media (min-width: $tablet) {
+    padding: $spacing-3xl $spacing-lg;
+  }
+  
+  @media (min-width: $desktop) {
+    padding: $spacing-3xl $spacing-xl;
+  }
+  
+  &--hero {
+    text-align: center;
+    background: $background-light;
+    // Padding extra para compensar o header flutuante
+    padding-top: calc(#{$spacing-3xl} + 5rem);
+    
+    @media (max-width: $tablet) {
+      padding-top: calc(#{$spacing-3xl} + 4rem);
+    }
+  }
+  
+  &--gray {
+    background-color: $background-gray;
+  }
+  
+  &--white {
+    background-color: $background-light;
+  }
+}
+
+// Containers
+.section-container {
+  @include container;
+  background: transparent;
+}
+
+// Hero específico
+.hero {
+  background: $background-light;
+  
+  &__title {
+    margin-bottom: $spacing-lg;
+    color: $text-color;
+  }
+  
+  &__subtitle {
+    margin-bottom: $spacing-2xl;
+    opacity: 0.8;
+    color: $text-color;
+  }
+  
+  &__description {
+    font-size: $font-lg;
+    margin-bottom: $spacing-2xl;
+    max-width: 42rem;
+    margin-left: auto;
+    margin-right: auto;
+    color: $text-color;
+  }
+  
+  &__actions {
+    @include flex(column, $spacing-md);
+    
+    @media (min-width: $mobile) {
+      @include flex(row, $spacing-md);
+      justify-content: center;
+    }
+  }
+}
+
+// Grid de serviços
+.services {
+  &__title {
+    text-align: center;
+    margin-bottom: $spacing-2xl;
+  }
+  
+  &__grid {
+    @include grid(1, $spacing-2xl);
+    
+    @media (min-width: $tablet) {
+      @include grid(3, $spacing-2xl);
+    }
+  }
+}
+
+.service-card {
+  background-color: $background-light;
+  padding: $spacing-lg;
+  border-radius: $border-radius-lg;
+  box-shadow: $shadow-sm;
+  border: $border-width solid #e5e7eb;
+  @include smooth-transition();
+  
+  &:hover {
+    box-shadow: $shadow-md;
+    transform: translateY(-2px);
+  }
+  
+  &__icon {
+    font-size: 2.5rem;
+    margin-bottom: $spacing-md;
+  }
+  
+  &__title {
+    margin-bottom: $spacing-sm;
+  }
+  
+  &__description {
+    margin-bottom: $spacing-md;
+  }
+  
+  &__features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: $spacing-md;
+    
+    li {
+      font-size: $font-sm;
+      color: $text-color;
+      margin-bottom: $spacing-xs;
+      
+      &::before {
+        content: '✓ ';
+        color: $primary-color;
+        font-weight: bold;
+      }
+    }
+  }
+  
+  &__price {
+    font-weight: 600;
+    color: $primary-color;
+    margin-bottom: $spacing-md;
+  }
+}
+
+// About section
+.about {
+  &__content {
+    @include grid(1, $spacing-2xl);
+    align-items: center;
+    
+    @media (min-width: $desktop) {
+      @include grid(2, $spacing-2xl);
+    }
+  }
+  
+  &__text {
+    h2 {
+      margin-bottom: $spacing-lg;
+    }
+    
+    p {
+      margin-bottom: $spacing-md;
+    }
+    
+    p:last-of-type {
+      margin-bottom: $spacing-lg;
+    }
+  }
+  
+  &__image {
+    background-color: #f3f4f6;
+    height: 20rem;
+    border-radius: $border-radius-lg;
+    @include center-content;
+    
+    p {
+      color: $text-color;
+      margin: 0;
+    }
+  }
+}
+
+// Contact section
+.contact {
+  text-align: center;
+  
+  &__title {
+    margin-bottom: $spacing-lg;
+  }
+  
+  &__description {
+    margin-bottom: $spacing-2xl;
+    max-width: 42rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  &__actions {
+    @include flex(column, $spacing-md);
+    
+    @media (min-width: $mobile) {
+      @include flex(row, $spacing-md);
+      justify-content: center;
+    }
+  }
+} 
