@@ -1,6 +1,6 @@
 import React from 'react';
-import Button from '@/components/ui/Button';
-import Title from '@/components/ui/Title';
+import Button from '../components/ui/Button';
+import Title from '../components/ui/Title';
 
 const HeroSection: React.FC = () => {
   return (

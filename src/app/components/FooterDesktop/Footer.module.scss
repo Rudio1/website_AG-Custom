@@ -1,0 +1,93 @@
+// === ESTILOS DO FOOTER ===
+
+.footer {
+  width: 100%;
+  background-color: #f9fafb; // $background-gray
+  border-top: 1px solid #e5e7eb; // $border-width
+  margin-top: auto;
+  
+  &__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    
+    @media (min-width: 768px) {
+      padding: 0 1.5rem;
+    }
+    
+    @media (min-width: 1024px) {
+      padding: 0 2rem;
+    }
+
+    padding-top: 3rem; // $spacing-2xl
+    padding-bottom: 3rem; // $spacing-2xl
+  }
+  
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 3rem; // $spacing-2xl
+    
+    @media (min-width: 768px) { // $tablet
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  &__section {
+    h3, h4 {
+      font-size: 1.125rem; // $font-lg
+      font-weight: 600;
+      color: #29339B; // $primary-color
+      margin-bottom: 1rem; // $spacing-md
+    }
+    
+    h4 {
+      font-size: 1rem; // $font-base
+      color: #0A0F0D; // $text-color
+    }
+    
+    p {
+      font-size: 0.875rem; // $font-sm
+      color: #0A0F0D; // $text-color
+      margin-bottom: 0.5rem; // $spacing-sm
+    }
+  }
+  
+  &__links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; // $spacing-sm
+    
+    li {
+      margin: 0;
+    }
+    
+    a {
+      font-size: 0.875rem; // $font-sm
+      color: #0A0F0D; // $text-color
+      text-decoration: none;
+      transition: all 0.2s ease-in-out;
+      
+      &:hover {
+        color: #AB87FF; // $hover-color
+        opacity: 0.8;
+      }
+    }
+  }
+  
+  &__bottom {
+    border-top: 1px solid #e5e7eb; // $border-width
+    margin-top: 3rem; // $spacing-2xl
+    padding-top: 1rem; // $spacing-md
+    text-align: center;
+    
+    p {
+      font-size: 0.875rem; // $font-sm
+      color: #0A0F0D; // $text-color
+      margin: 0;
+    }
+  }
+} 

@@ -1,25 +1,24 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "../styles/globals.scss";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
+import { Work_Sans, Open_Sans } from "next/font/google";
+import Header from "./components/HeaderDesktop/Header";
+import Footer from "./components/FooterDesktop/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const workSans = Work_Sans({ 
   subsets: ["latin"],
+  weight: ['300', '400', '700'],
+  variable: '--font-work-sans',
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const openSans = Open_Sans({
+  subsets: ['latin'],
+  style: ['italic'],
+  weight: ['300', '400'],
+  variable: '--font-open-sans',
 });
 
 export const metadata: Metadata = {
   title: "AG Custom",
-  description: "Soluções personalizadas para seu negócio",
-  icons: {
-    icon: "/ag_custom.png",
-  },
+  description: "Portfolio AG Custom",
 };
 
 export default function RootLayout({
@@ -29,14 +28,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <div className="app-wrapper">
-          <Header />
-          <main>
-            {children}
-          </main>
-          <Footer />
-        </div>
+      <body 
+        className={`${workSans.variable} ${openSans.variable}`}
+        style={{ backgroundColor: '#181A1C', color: '#fff' }}
+      >
+        <Header />
+        {children}
+        <Footer />
       </body>
     </html>
   );
