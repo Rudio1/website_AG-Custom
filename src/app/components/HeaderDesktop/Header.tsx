@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from 'react';
+import Link from 'next/link';
 import './Header.scss'; // Import styles globally
 import clsx from 'clsx';
 
@@ -12,10 +13,10 @@ const Header = () => {
   };
 
   const navItems = [
-    { href: '#', label: 'Início', dataContent: 'Voltar ao início', delay: '' },
+    { href: '/', label: 'Início', dataContent: 'Voltar ao início', delay: '' },
     { href: '#', label: 'Serviços', dataContent: 'Explore nossos serviços', delay: '-delay-1' },
     { href: '#', label: 'Sobre', dataContent: 'Conheça a AG Custom', delay: '-delay-2' },
-    { href: '#', label: 'Contato', dataContent: 'Entre em contato', delay: '-delay-3' },
+    { href: '/contatos', label: 'Contato', dataContent: 'Entre em contato', delay: '-delay-3' },
     { href: '#', label: 'Projetos', dataContent: 'Veja nossos projetos', delay: '-delay-4' },
   ];
 
