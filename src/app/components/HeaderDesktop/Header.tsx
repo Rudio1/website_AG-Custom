@@ -1,8 +1,7 @@
 "use client";
 
-import { useState } from 'react';
-import Link from 'next/link';
-import './Header.scss'; // Import styles globally
+import { useState } from 'react';;
+import './Header.scss';
 import clsx from 'clsx';
 
 const Header = () => {
