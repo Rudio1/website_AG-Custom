@@ -1,23 +1,35 @@
 import React from 'react';
-import Button from '../components/ui/Button';
-import Title from '../components/ui/Title';
+import Image from 'next/image';
+import styles from './HeroSection.module.scss';
 
 const HeroSection: React.FC = () => {
   return (
-    <section id="home" className="section section--hero">
-      <div className="section-container">
-        <Title level={1} centered className="hero__title">
-          Bem-vindo à AG Custom
-        </Title>
-        <Title level={3} centered variant="muted" className="hero__subtitle">
-          Soluções personalizadas para seu negócio
-        </Title>
-        <p className="hero__description">
-          Desenvolvemos projetos únicos e sob medida para transformar suas ideias em realidade.
-        </p>
-        <div className="hero__actions">
-          <Button size="lg">Entre em Contato</Button>
-          <Button variant="secondary" size="lg">Nossos Serviços</Button>
+    <section className={styles.heroSection}>
+      <div className={styles.heroContainer}>
+        {/* Conteúdo à esquerda */}
+        <div className={styles.heroContent}>
+          <h1 className={styles.heroTitle}>
+            Chega de Quebrar Cabeça!
+          </h1>
+          <p className={styles.heroDescription}>
+            Somos especialistas em desenvolver sites, aplicativos e soluções sob medida que descomplicam o seu dia a dia. Cuidamos de toda a parte técnica, desde a ideia até a entrega, para que você possa focar no que realmente importa.
+          </p>
+          <div className={styles.heroActions}>
+            <button className={styles.heroButton}>
+              Saiba mais
+            </button>
+          </div>
+        </div>
+
+        {/* SVG à direita */}
+        <div className={styles.heroIllustration}>
+          <Image 
+            src="/Illustration - messy.svg" 
+            alt="Ilustração de pessoa em movimento com documentos voando" 
+            width={461} 
+            height={346}
+            priority
+          />
         </div>
       </div>
     </section>

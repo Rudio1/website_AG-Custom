@@ -1,9 +1,10 @@
 import '@/styles/components/_page.scss';
+import HeroSection from './sections/HeroSection';
 
 export default function Home() {
   return (
     <div className="page">
-      {/* As seções foram removidas temporariamente. */}
+      <HeroSection />
     </div>
   );
 }
