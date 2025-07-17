@@ -1,12 +1,9 @@
-.heroSection {
-  min-height: 100vh;
+.callToActionSection {
   background-color: #1a1a1a;
-  display: flex;
-  align-items: center;
-  padding: 2rem 0;
+  padding: 5rem 0;
 }
 
-.heroContainer {
+.callToActionContainer {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
@@ -16,51 +13,40 @@
   align-items: center;
 }
 
-.heroContent {
+.callToActionIllustration {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.callToActionContent {
   color: #ffffff;
 }
 
-.heroTitle {
+.callToActionTitle {
   font-size: 3rem;
   font-weight: bold;
   line-height: 1.2;
   margin-bottom: 2rem;
   color: #ffffff;
+  text-align: left;
 }
 
-.heroTitleEmphasis {
-  display: block;
-  color: #8b5cf6;
-  animation: gentleShake 3s ease-in-out infinite;
-  transform-origin: center;
-}
-
-@keyframes gentleShake {
-  0%, 100% {
-    transform: translateX(0) rotate(0deg);
-  }
-  25% {
-    transform: translateX(-1px) rotate(-0.5deg);
-  }
-  75% {
-    transform: translateX(1px) rotate(0.5deg);
-  }
-}
-
-.heroDescription {
+.callToActionDescription {
   font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 3rem;
   color: #ffffff;
   opacity: 0.9;
+  text-align: left;
 }
 
-.heroActions {
-  display: flex;
-  gap: 1rem;
-}
-
-.heroButton {
+.callToActionButton {
   background-color: #8b5cf6;
   color: #ffffff;
   border: none;
@@ -73,6 +59,7 @@
   transition: all 0.3s ease;
   text-decoration: none;
   display: inline-block;
+  float: right;
   position: relative;
   overflow: hidden;
   height: 45px;
@@ -108,48 +95,33 @@
   }
 }
 
-.heroIllustration {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-}
-
 /* Responsividade */
 @media (max-width: 768px) {
-  .heroContainer {
+  .callToActionContainer {
     grid-template-columns: 1fr;
     gap: 2rem;
     text-align: center;
   }
 
-  .heroTitle {
+  .callToActionTitle {
     font-size: 2.5rem;
   }
 
-  .heroDescription {
+  .callToActionDescription {
     font-size: 1rem;
-  }
-
-  .heroActions {
-    justify-content: center;
   }
 }
 
 @media (max-width: 480px) {
-  .heroContainer {
+  .callToActionContainer {
     padding: 0 1rem;
   }
 
-  .heroTitle {
+  .callToActionTitle {
     font-size: 2rem;
   }
 
-  .heroDescription {
+  .callToActionDescription {
     font-size: 0.9rem;
   }
 } 

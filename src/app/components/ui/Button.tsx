@@ -37,6 +37,9 @@ const Button: React.FC<ButtonProps> = ({
       className={classes}
     >
       {children}
+      <svg>
+        <rect x="0" y="0" fill="none" width="100%" height="100%"/>
+      </svg>
     </button>
   );
 };

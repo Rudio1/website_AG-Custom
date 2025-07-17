@@ -18,6 +18,9 @@ const HeroSection: React.FC = () => {
           <div className={styles.heroActions}>
             <button className={styles.heroButton}>
               Saiba mais
+              <svg>
+                <rect x="0" y="0" fill="none" width="100%" height="100%"/>
+              </svg>
             </button>
           </div>
         </div>
