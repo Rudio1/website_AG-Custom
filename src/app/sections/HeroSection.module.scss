@@ -21,11 +21,30 @@
 }
 
 .heroTitle {
-  font-size: 3.5rem;
+  font-size: 3.2rem;
   font-weight: bold;
   line-height: 1.2;
   margin-bottom: 2rem;
   color: #ffffff;
+}
+
+.heroTitleEmphasis {
+  display: block;
+  color: #8b5cf6;
+  animation: gentleShake 3s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes gentleShake {
+  0%, 100% {
+    transform: translateX(0) rotate(0deg);
+  }
+  25% {
+    transform: translateX(-1px) rotate(-0.5deg);
+  }
+  75% {
+    transform: translateX(1px) rotate(0.5deg);
+  }
 }
 
 .heroDescription {

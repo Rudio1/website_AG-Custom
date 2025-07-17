@@ -9,7 +9,8 @@ const HeroSection: React.FC = () => {
         {/* Conteúdo à esquerda */}
         <div className={styles.heroContent}>
           <h1 className={styles.heroTitle}>
-            Chega de Quebrar Cabeça!
+            Chega de<br />
+            <span className={styles.heroTitleEmphasis}>Quebrar a cabeça!</span>
           </h1>
           <p className={styles.heroDescription}>
             Somos especialistas em desenvolver sites, aplicativos e soluções sob medida que descomplicam o seu dia a dia. Cuidamos de toda a parte técnica, desde a ideia até a entrega, para que você possa focar no que realmente importa.
