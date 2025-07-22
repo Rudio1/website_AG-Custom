@@ -9,7 +9,7 @@ const CallToActionSection: React.FC = () => {
         {/* Imagem à esquerda */}
         <div className={styles.callToActionIllustration}>
           <Image 
-            src="/unboxing.png" 
+            src="/unboxing.svg" 
             alt="Pessoa explorando uma caixa aberta - representando descoberta e novas ideias" 
             width={500} 
             height={500}
