@@ -15,8 +15,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
+      <head>
+        {/* Meta tag para melhorar a estabilidade do HMR */}
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+      </head>
       <body 
         style={{ backgroundColor: '#181A1C', color: '#fff' }}
+        suppressHydrationWarning={true}
       >
         <Header />
         {children}

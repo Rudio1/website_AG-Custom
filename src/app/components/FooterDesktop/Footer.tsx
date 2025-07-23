@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
       <div className={styles['footer__container']}>
         <div className={styles['footer__content']}>
           <p className={styles['footer__text']}>
-            © 2025 <b>Powered By AG Custom</b>. Todos os direitos reservados
+            © 2025 <b>AG Custom</b>. Todos os direitos reservados
           </p>
           <div className={styles['footer__logo']}>
             <Image 

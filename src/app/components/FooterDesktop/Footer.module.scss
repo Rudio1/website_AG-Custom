@@ -19,8 +19,9 @@
     gap: 1rem;
     
     @media (max-width: 768px) {
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       padding: 0 1rem;
+      gap: 0.5rem;
     }
   }
   
@@ -28,6 +29,11 @@
     font-size: 0.875rem;
     color: #fff;
     margin: 0;
+    
+    @media (max-width: 768px) {
+      font-size: 0.75rem;
+      white-space: nowrap;
+    }
   }
 
   &__logo {
@@ -36,6 +42,13 @@
     
     img {
       object-fit: contain;
+    }
+    
+    @media (max-width: 768px) {
+      img {
+        width: 32px;
+        height: 32px;
+      }
     }
   }
 } 
