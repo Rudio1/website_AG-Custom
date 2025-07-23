@@ -1,8 +1,17 @@
+"use client";
+
 import React from 'react';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 import styles from './HeroSection.module.scss';
 
 const HeroSection: React.FC = () => {
+  const router = useRouter();
+
+  const handleNavigate = () => {
+    router.push('/projetos');
+  };
+
   return (
     <section className={styles.heroSection}>
       <div className={styles.heroContainer}>
@@ -16,7 +25,7 @@ const HeroSection: React.FC = () => {
             Somos especialistas em desenvolver sites, aplicativos e soluções sob medida que descomplicam o seu dia a dia. Cuidamos de toda a parte técnica, desde a ideia até a entrega, para que você possa focar no que realmente importa.
           </p>
           <div className={styles.heroActions}>
-            <button className={styles.heroButton}>
+            <button onClick={handleNavigate} className={styles.heroButton}>
               Saiba mais
               <svg>
                 <rect x="0" y="0" fill="none" width="100%" height="100%"/>
@@ -40,4 +49,4 @@ const HeroSection: React.FC = () => {
   );
 };
 
-export default HeroSection; 
+export default HeroSection;
