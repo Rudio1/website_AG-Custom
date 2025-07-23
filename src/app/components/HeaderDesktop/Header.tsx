@@ -15,9 +15,8 @@ const Header = () => {
   const navItems = [
     { href: '/', label: 'Início', dataContent: 'Voltar ao início', delay: '' },
     { href: '#', label: 'Serviços', dataContent: 'Explore nossos serviços', delay: '-delay-1' },
-    { href: '#', label: 'Sobre', dataContent: 'Conheça a AG Custom', delay: '-delay-2' },
-    { href: '/contatos', label: 'Contato', dataContent: 'Entre em contato', delay: '-delay-3' },
     { href: '/projetos', label: 'Projetos', dataContent: 'Veja nossos projetos', delay: '-delay-4' },
+    { href: '/contatos', label: 'Contato', dataContent: 'Entre em contato', delay: '-delay-3' },
   ];
 
   return (
