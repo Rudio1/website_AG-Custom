@@ -71,7 +71,7 @@ const ServicesSection: React.FC = () => {
   };
 
   return (
-    <section className={styles.servicesSection}>
+    <section id="servicos" className={styles.servicesSection}>
       <div className={styles.servicesContainer}>
         <h2 className={styles.servicesTitle}>
           Conheça nossos serviços

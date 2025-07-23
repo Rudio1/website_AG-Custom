@@ -14,7 +14,7 @@ const Header = () => {
 
   const navItems = [
     { href: '/', label: 'Início', dataContent: 'Voltar ao início', delay: '' },
-    { href: '#', label: 'Serviços', dataContent: 'Explore nossos serviços', delay: '-delay-1' },
+    { href: '#servicos', label: 'Serviços', dataContent: 'Explore nossos serviços', delay: '-delay-1' },
     { href: '/projetos', label: 'Projetos', dataContent: 'Veja nossos projetos', delay: '-delay-4' },
     { href: '/contatos', label: 'Contato', dataContent: 'Entre em contato', delay: '-delay-3' },
   ];
@@ -46,7 +46,20 @@ const Header = () => {
                   [`slide-in-nav-item${item.delay}`]: isMenuOpen,
                   [`slide-in-nav-item${item.delay}-reverse`]: !isMenuOpen,
                 })}
-                onClick={() => window.location.href = item.href}
+                onClick={() => {
+                  if (item.href.startsWith('#')) {
+                    // Para âncoras na mesma página, fazer scroll suave
+                    const element = document.querySelector(item.href);
+                    if (element) {
+                      element.scrollIntoView({ behavior: 'smooth' });
+                    }
+                    // Fechar o menu após o clique
+                    setIsMenuOpen(false);
+                  } else {
+                    // Para links externos, usar navegação normal
+                    window.location.href = item.href;
+                  }
+                }}
                 style={{ cursor: 'pointer' }}
               >
                 <a href={item.href} data-content={item.dataContent}>
