@@ -4,12 +4,23 @@
 
   /* Logo do Header */
   .header-logo {
-    position: fixed;
+    position: absolute;
     left: 5rem;
     top: 3.2rem;
     z-index: 100;
     cursor: pointer;
-    transition: opacity 0.3s ease;
+    transition: all 0.3s ease;
+    background: rgba(24, 26, 28, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transform: translateY(0);
+  }
+
+  .header-logo.header-hidden {
+    transform: translateY(-100px);
+    opacity: 0;
   }
 
   .header-logo:hover {
@@ -171,13 +182,25 @@
   ==================================== */
 
   .open-overlay {
-    position: fixed;
+    position: absolute;
     right: 5rem;
     top: 3.2rem;
     z-index: 100;
     width: 34px;
     display: block;
     cursor: pointer;
+    background: rgba(24, 26, 28, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    transform: translateY(0);
+  }
+
+  .open-overlay.header-hidden {
+    transform: translateY(-100px);
+    opacity: 0;
   }
 
   .open-overlay span {

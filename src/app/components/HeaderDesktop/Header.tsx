@@ -1,16 +1,37 @@
 "use client";
 
-import { useState } from 'react';;
+import { useState, useEffect } from 'react';
 import './Header.scss';
 import clsx from 'clsx';
 import Image from 'next/image';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isHeaderVisible, setIsHeaderVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        // Scrolling down
+        setIsHeaderVisible(false);
+      } else {
+        // Scrolling up
+        setIsHeaderVisible(true);
+      }
+      
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY]);
 
   const navItems = [
     { href: '/', label: 'Início', dataContent: 'Voltar ao início', delay: '' },
@@ -22,7 +43,9 @@ const Header = () => {
   return (
     <>
       {/* Logo à esquerda */}
-      <div className="header-logo" onClick={() => window.location.href = '/'}>
+      <div className={clsx('header-logo', {
+        'header-hidden': !isHeaderVisible
+      })} onClick={() => window.location.href = '/'}>
         <Image 
           src="/logo_footer.svg" 
           alt="AG Custom Logo" 
@@ -71,7 +94,9 @@ const Header = () => {
         </nav>
       </div>
 
-      <div className="open-overlay" onClick={toggleMenu}>
+      <div className={clsx('open-overlay', {
+        'header-hidden': !isHeaderVisible
+      })} onClick={toggleMenu}>
         <span className={clsx('bar-top', {
           'animate-top-bar': isMenuOpen,
           'animate-out-top-bar': !isMenuOpen,
@@ -89,4 +114,4 @@ const Header = () => {
   );
 };
 
-export default Header; 
+export default Header;

@@ -15,4 +15,10 @@
 
 html, body {
   font-family: "PPSupplyMono", monospace;
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+  padding-top: 6rem; /* Espaço para o header */
 } 
