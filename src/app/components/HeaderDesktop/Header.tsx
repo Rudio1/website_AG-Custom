@@ -15,7 +15,7 @@ const Header = () => {
   const navItems = [
     { href: '/', label: 'Início', dataContent: 'Voltar ao início', delay: '' },
     { href: '#servicos', label: 'Serviços', dataContent: 'Explore nossos serviços', delay: '-delay-1' },
-    { href: '/projetos', label: 'Projetos', dataContent: 'Veja nossos projetos', delay: '-delay-4' },
+    { href: '/projetos', label: 'Projetos', dataContent: 'Veja nossos projetos', delay: '-delay-2' },
     { href: '/contatos', label: 'Contato', dataContent: 'Entre em contato', delay: '-delay-3' },
   ];
 
