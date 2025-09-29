@@ -57,6 +57,19 @@
   transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
   border: 1px solid transparent;
+  position: relative;
+
+  &:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    bottom: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #555, #666, #555, transparent);
+    box-shadow: 0 0 8px rgba(85, 85, 85, 0.3);
+  }
 
   &:hover {
     transform: translateY(-3px);
@@ -82,8 +95,19 @@
   min-width: 300px;
   transition: transform 0.3s ease;
 
+  img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    image-rendering: high-quality;
+    filter: contrast(1.05) saturate(1.1);
+  }
+
   &:hover {
     transform: scale(1.02);
+    
+    img {
+      filter: contrast(1.1) saturate(1.2);
+    }
   }
 }
 

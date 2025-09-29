@@ -107,7 +107,71 @@ const ProjetosSection: React.FC = () => {
                   <path d="M7 17L17 7M17 7H7M17 7V17"/>
                 </svg>
               </a>
-              <a href="https://website-brunelly-baiocco-ivory.vercel.app/" className={styles.projetoLink}>
+              <a href="https://website-brunelly-baiocco.vercel.app/" className={styles.projetoLink}>
+                <span>Site</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div 
+          ref={(el) => {
+            projectRefs.current[2] = el;
+          }}
+          className={styles.projetoItem}
+        >
+          <div className={styles.projetoText}>
+            <h3>Ceci&apos;s</h3>
+            <p>
+              O <strong>Ceci&apos;s</strong> é um WebApp com o objetivo de oferecer uma experiência prática e moderna, permitindo que o público acesse facilmente as informações sobre produtos e novidades direto do celular, fortalecendo a presença digital da marca e aproximando o restaurante de seus clientes.
+            </p>
+            <div className={styles.links}>
+              <a href="https://www.cecis.com.br" className={styles.projetoLink}>
+                <span>Site</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div className={styles.projetoImage}>
+            <Image
+              src="/Cecis.png"
+              alt="Projeto Ceci's"
+              width={400}
+              height={280}
+            />
+          </div>
+        </div>
+
+        <div 
+          ref={(el) => {
+            projectRefs.current[3] = el;
+          }}
+          className={styles.projetoItem}
+        >
+          <div className={styles.projetoImage}>
+            <Image
+              src="/psi-amanda.png"
+              alt="Projeto Psicóloga Amanda"
+              width={600}
+              height={400}
+              quality={95}
+              priority={false}
+              placeholder="blur"
+              blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
+            />
+          </div>
+          <div className={styles.projetoText}>
+            <h3>Psicóloga Amanda</h3>
+            <p>
+              Website profissional desenvolvido para a <strong>Psicóloga Amanda</strong>, oferecendo uma plataforma digital elegante e acolhedora para apresentar seus serviços de psicologia. O projeto visa criar uma conexão confiável entre a profissional e seus pacientes, facilitando o acesso às informações sobre atendimentos e fortalecendo a presença digital no campo da saúde mental.
+            </p>
+            <div className={styles.links}>
+              <a href="http://psi-amanda.rudio1.com.br/" className={styles.projetoLink}>
                 <span>Site</span>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M7 17L17 7M17 7H7M17 7V17"/>

@@ -164,6 +164,100 @@ const ProjetosMobile: React.FC = () => {
           </div>
         </div>
 
+        {/* Projeto 3 - Ceci's */}
+        <div 
+          ref={(el) => {
+            projectRefs.current[2] = el;
+          }}
+          className={styles.mobileProjectCard}
+        >
+          <div className={styles.projectImageContainer}>
+            <div className={styles.imageWrapper}>
+              <Image
+                src="/Cecis.png"
+                alt="Projeto Ceci's"
+                width={400}
+                height={300}
+                className={styles.mobileProjectImage}
+              />
+              <div className={styles.imageOverlay}>
+                <span className={styles.projectType}>Website</span>
+              </div>
+            </div>
+          </div>
+          
+          <div className={styles.projectContent}>
+            <div className={styles.projectBadge}>WebApp</div>
+            <h3 className={styles.projectTitle}>Ceci&apos;s</h3>
+            <p className={styles.projectDescription}>
+              O <strong>Ceci&apos;s</strong> é um WebApp com o objetivo de oferecer uma experiência prática e moderna, permitindo que o público acesse facilmente as informações sobre produtos e novidades direto do celular, fortalecendo a presença digital da marca e aproximando o restaurante de seus clientes.
+            </p>
+            
+            <div className={styles.mobileLinks}>
+              <a 
+                href="https://www.cecis.com.br" 
+                className={styles.mobileLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>Site</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Projeto 4 - Psicóloga Amanda */}
+        <div 
+          ref={(el) => {
+            projectRefs.current[3] = el;
+          }}
+          className={styles.mobileProjectCard}
+        >
+          <div className={styles.projectImageContainer}>
+            <div className={styles.imageWrapper}>
+              <Image
+                src="/psi-amanda.png"
+                alt="Projeto Psicóloga Amanda"
+                width={500}
+                height={400}
+                quality={95}
+                priority={false}
+                placeholder="blur"
+                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
+                className={styles.mobileProjectImage}
+              />
+              <div className={styles.imageOverlay}>
+                <span className={styles.projectType}>Website</span>
+              </div>
+            </div>
+          </div>
+          
+          <div className={styles.projectContent}>
+            <div className={styles.projectBadge}>Website Profissional</div>
+            <h3 className={styles.projectTitle}>Psicóloga Amanda</h3>
+            <p className={styles.projectDescription}>
+              Website profissional desenvolvido para a <strong>Psicóloga Amanda</strong>, oferecendo uma plataforma digital elegante e acolhedora para apresentar seus serviços de psicologia. O projeto visa criar uma conexão confiável entre a profissional e seus pacientes, facilitando o acesso às informações sobre atendimentos e fortalecendo a presença digital no campo da saúde mental.
+            </p>
+            
+            <div className={styles.mobileLinks}>
+              <a 
+                href="http://psi-amanda.rudio1.com.br/" 
+                className={styles.mobileLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>Site</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
         {/* Call to Action */}
         <div className={styles.mobileCTA}>
           <h3>Interessado em trabalhar conosco?</h3>
